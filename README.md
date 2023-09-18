@@ -81,7 +81,7 @@ python tools/test.py configs_wm/tocnet.py [your pth file]
 
 **When using the slpd dataset, set the attribute `data_root` of `configs_wm/base/coco_detection.py` to `data/slpd`**
 
-**When using the ufpr_alpr dataset, set the attribute `data_root` of `configs_wm/base/coco_detection.py` to `data/ufpr_alpr`****
+**When using the ufpr_alpr dataset, set the attribute `data_root` of `configs_wm/base/coco_detection.py` to `data/ufpr_alpr`**
 
 
 ## 5. LICENSE
