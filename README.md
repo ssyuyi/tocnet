@@ -44,7 +44,6 @@ pip install -v -e .
 | UFPR-ALPR                | [author web](https://github.com/raysonlaroca/ufpr-alpr-dataset)   |
 
 Note that we have only released the test portion of dataset SLPD, and will release the full training data when the paper is accepted.
-Dataset UFPR-ALPR is the experimental data from . Students can contact them for free access to [UFPR-ALPR](https://github.com/raysonlaroca/ufpr-alpr-dataset).
 
 After downloading, please save the dataset as structured in the following way
 
