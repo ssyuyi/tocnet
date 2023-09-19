@@ -64,7 +64,6 @@ class tocnet(BaseDetector):
         losses = self.bbox_head.loss(nfs, batch_data_samples)
         loss_ar = self.arloss(x,a,r)
         losses['loss_ar'] = loss_ar*0.1
-        
         return losses
 
     def gen_ar(self, batch_inputs: Tensor,
@@ -72,10 +71,8 @@ class tocnet(BaseDetector):
         x = copy.deepcopy(batch_inputs)
         a = copy.deepcopy(batch_inputs)
         r = copy.deepcopy(batch_inputs)
-
         for idx, sample in enumerate(batch_data_samples):
             a, r = self.get_ar(x, a, r, idx, sample)
-
         return x,a,r
 
     def get_ar(self, x, a, r, idx, sx, n=7, s=1):
@@ -84,14 +81,12 @@ class tocnet(BaseDetector):
         _, c, h, w = x.shape
         cx = h // n
         cy = w // n
-
         pics = []
         for i in range(n):
             for j in range(n):
                 tmp = x[idx, :, cx * i:cx * (i + 1), cy * j:cy * (j + 1)]
                 if label[j, i] == 0:
                     pics.append(tmp)
-
         random.shuffle(pics)
         k = 0
         for i in range(n):
@@ -99,7 +94,6 @@ class tocnet(BaseDetector):
                 if label[j, i] == 0:
                     a[idx, :, cx * i:cx * (i + 1), cy * j:cy * (j + 1)] = pics[k]
                     k += 1
-
         for i in range(n):
             for j in range(n):
                 if label[j, i] == 1:
@@ -133,7 +127,6 @@ class tocnet(BaseDetector):
         for i in range(3):
             loss_tmp = self.sim(x[i], a[i], r[i])
             losses.append(loss_tmp)
-
         a0 = 0
         a1 = 0
         a2 = 1
