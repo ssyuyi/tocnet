@@ -35,6 +35,8 @@ mim install "mmcv>=2.0.0"
 git clone https://github.com/ssyuyi/tocnet.git
 cd tocnet
 pip install -v -e .
+pip install -r requirements.txt
+pip install -r requirements/albu.txt
 ```
 
 ## 3. datasets
@@ -83,6 +85,6 @@ python tools/test.py configs_wm/tocnet.py [your pth file]
 **When using the ufpr_alpr dataset, set the attribute `data_root` of `configs_wm/base/coco_detection.py` to `data/ufpr_alpr`**
 
 
-## 5. LICENSE
+## 6. LICENSE
 This project is released under the [Apache 2.0 license](./LICENSE) license.
 
