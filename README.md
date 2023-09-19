@@ -67,7 +67,7 @@ After downloading, please save the dataset as structured in the following way
 
 ## 4. train
 ```angular2html
-python tools/train.py configs_wm/tocnet.py
+python tools/train.py configs_wm/tocnet.py your_work_dir
 ```
 
 ## 5. test
@@ -76,7 +76,7 @@ python tools/train.py configs_wm/tocnet.py
 | SLPD         | 83.0   | 92.2 | 87.4 | 86.9 | 60.1 | [password: SLPD](https://pan.baidu.com/s/1Fd_xmP1yRYRgvkox8V0WBQ) |
 | UFPR-ALPR    | 98.0   | 98.3 | 98.1 | 98.7 | 60.1 | [password: SLPD](https://pan.baidu.com/s/1ccIHu6Tgl-4zg-lBuPjzHA ) |
 ```angular2html
-python tools/test.py configs_wm/tocnet.py [your pth file]
+python tools/test.py configs_wm/tocnet.py your_pth_file
 ```
 **Note!**
 
