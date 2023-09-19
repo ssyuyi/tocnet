@@ -45,23 +45,29 @@ pip install -r requirements/albu.txt
 | SLPD (include json file) | [password: SLPD](https://pan.baidu.com/s/1MZn0vcpPw-2LlBb71LXq-w) |
 | UFPR-ALPR                | [author web](https://github.com/raysonlaroca/ufpr-alpr-dataset)   |
 
-Note that we have only released the test portion of dataset SLPD, and will release the full training data when the paper is accepted.
 
-After downloading, please save the dataset as structured in the following way
+
+**Note !**
+
+**After downloading, please save the dataset as structured in the following way :**
 
 ```angular2html
--- .......
--- configs_wm
--- tools
--- data
-    -- slpd
-        -- images (all images in it)
-        -- train.json
-        -- test.json
-    -- ufpr-alpr
-        -- images
-        -- train.json
-        -- test.jasn
+tocnet
+    |-- ......
+    |-- configs_wm
+        |-- ......
+    |-- tools
+        |-- train.py
+        |-- test.py
+    |-- data
+        |-- slpd
+            |-- images (all images in it)
+            |-- train.json
+            |-- test.json
+        |-- ufpr_alpr
+            |-- images
+            |-- train.json
+            |-- test.json
 ```
 **Note that the train.json will be upload after our paper is accepted.**
 
