@@ -169,7 +169,6 @@ class tocnet(BaseDetector):
             x = self.neck(x)
         return x
 
-
     def backbone_et(self, batch_inputs: Tensor) -> Tuple[Tensor]:
         x = self.backbone(batch_inputs)
         return x
