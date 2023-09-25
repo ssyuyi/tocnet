@@ -29,13 +29,6 @@ def parse_args():
         type=str,
         help='dump predictions to a pickle file for offline evaluation')
     parser.add_argument(
-        '--show', action='store_true', help='show prediction results')
-    parser.add_argument(
-        '--show-dir',
-        help='directory where painted images will be saved. '
-        'If specified, it will be automatically saved '
-        'to the work_dir/timestamp/show_dir')
-    parser.add_argument(
         '--wait-time', type=float, default=2, help='the interval of show (s)')
     parser.add_argument(
         '--cfg-options',
