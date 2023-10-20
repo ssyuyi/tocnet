@@ -69,7 +69,6 @@ tocnet
             |-- train.json
             |-- test.json
 ```
-**Note that the train.json will be upload after our paper is accepted.**
 
 ## 4. train
 ```angular2html
